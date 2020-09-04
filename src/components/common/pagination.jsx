@@ -11,7 +11,7 @@ const Pagination = (props) => {
 
     console.log(currentPage)
 
-    if (pagesCount == 1)
+    if (pagesCount === 1)
         return null
 
     return ( 

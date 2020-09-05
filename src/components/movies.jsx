@@ -7,7 +7,10 @@ import { getGenres } from "../services/fakeGenreService";
 import MoviesTable from "./moviesTable";
 import _ from "lodash";
 
+
 class Movies extends Component {
+
+
   state = {
     movies: [],
     genres: [],
@@ -86,7 +89,7 @@ class Movies extends Component {
             onSort={this.handleSort}
             movies={movies}
             onLike={this.handleLike}
-            onDelete={this.onDelete}
+            onDelete={this.handleDelete}
             sortColumn={sortColumn}
           />
           <Pagination

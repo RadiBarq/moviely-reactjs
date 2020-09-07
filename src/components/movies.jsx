@@ -48,7 +48,8 @@ class Movies extends Component {
   }
 
   getPagedData = () => {
-    if (count === 0) return <p>There are no movies in the database</p>;
+
+    
 
     const {
       pageSize,
@@ -69,14 +70,16 @@ class Movies extends Component {
     );
 
     const movies = paginate(sorted, currentPage, pageSize);
-    return {totalCount: filtered.length, data: movies}
+    return {totalCount: filteredMovies.length, data: movies}
   };
 
   render() {
     
-    const { length: count } = this.state.movies
+    const { length: count, selectedGenre } = this.state.movies
     const {totalCount, data} = this.getPagedData()
     const { pageSize, currentPage, sortColumn } = this.state
+
+    if (count === 0) return <p>There are no movies in the database</p>;
 
     return (
       <div className="row">

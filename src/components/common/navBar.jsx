@@ -1,7 +1,5 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import Movies from "../movies";
-import Customers from '../customers';
 
 const NavBar = () => {
   return (
@@ -19,6 +17,12 @@ const NavBar = () => {
           </NavLink>
           <NavLink className="nav-link" to="/rentals">
             Rentals
+          </NavLink>
+          <NavLink className="nav-item nav-link" to="/login">
+            Login
+          </NavLink>
+          <NavLink className="nav-item nav-link" to="/register">
+            Register
           </NavLink>
         </div>
       </div>
